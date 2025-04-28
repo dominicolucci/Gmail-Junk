@@ -55,9 +55,9 @@ def confirm_and_archive(mail, candidates):
             mail.store(email_info["uid"], "+FLAGS", "\\Deleted")
 
         mail.expunge()
-        print(f"\n✅ Archived {len(candidates)} email(s) successfully.")
+        print(f"\n Archived {len(candidates)} email(s) successfully.")
     else:
-        print("\n❌ No changes were made.")
+        print("\n No changes were made.")
 
 def main():
     mail = connect_to_gmail()
